@@ -65,5 +65,42 @@ namespace Testes
             
             Assert.Equal(2, falseWorker.Contracts.Count);
         }
+
+        public void TesteValorASerPago()
+        {
+            #region Mock
+            Worker falseWorker = new Worker
+            {
+                Level = WorkerLevel.Junior,
+                Name = "Jorge",
+                BaseSalary = 2400.00,
+                Contracts =
+                {
+                    new HourContract
+                    {
+                        Date = new DateTime(2022, 07, 30),
+                        Hours = 40,
+                        ValuePerHour = 30.00
+                    },
+                    new HourContract
+                    {
+                        Date = new DateTime(2022, 07, 30),
+                        Hours = 40,
+                        ValuePerHour = 30.00
+                    },
+                    new HourContract
+                    {
+                        Date = new DateTime(2022, 07, 30),
+                        Hours = 40,
+                        ValuePerHour = 30.00
+                    }
+                }
+            };
+            #endregion
+
+            var result = falseWorker.Income(2022, 07);
+            
+            Assert.Equal(6000.0, result);
+        }
     }
 }
