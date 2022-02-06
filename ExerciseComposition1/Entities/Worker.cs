@@ -41,5 +41,11 @@ namespace ExerciseComposition1.Entities
 
             return BaseSalary + calcContracts;
         }
+
+        public override string ToString()
+        {
+            return "Name: " + Name
+                            + "\nDepartment: " + Department.Name;
+        }
     }
 }
