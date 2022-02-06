@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExerciseComposition1
+namespace ExerciseComposition1.Entities
 {
     public class HourContract
     {

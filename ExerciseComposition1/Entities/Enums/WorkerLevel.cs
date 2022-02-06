@@ -1,4 +1,4 @@
-﻿namespace ExerciseComposition1
+﻿namespace ExerciseComposition1.Entities.Enums
 {
     public enum WorkerLevel
     {

@@ -1,5 +1,6 @@
 ﻿using System;
-using ExerciseComposition1;
+using ExerciseComposition1.Entities;
+using ExerciseComposition1.Entities.Enums;
 using Xunit;
 
 namespace Testes
