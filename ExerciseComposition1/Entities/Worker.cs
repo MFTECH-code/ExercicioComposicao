@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ExerciseComposition1.Entities.Enums;
 
 namespace ExerciseComposition1.Entities
@@ -24,6 +25,20 @@ namespace ExerciseComposition1.Entities
         public void RemoveContract(int indexer)
         {
             Contracts.RemoveAt(indexer);
+        }
+
+        public double Income(int year, int month)
+        {
+            var calcContracts = 0.0;
+            foreach (var contract in Contracts)
+            {
+                if (contract.Date.Year == year && contract.Date.Month == month)
+                {
+                    calcContracts += contract.TotalValue();
+                }
+            }
+
+            return BaseSalary + calcContracts;
         }
     }
 }
