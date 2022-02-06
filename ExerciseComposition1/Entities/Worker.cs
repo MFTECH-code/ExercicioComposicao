@@ -20,5 +20,10 @@ namespace ExerciseComposition1.Entities
         {
             Contracts.Add(contract);
         }
+
+        public void RemoveContract(int indexer)
+        {
+            Contracts.RemoveAt(indexer);
+        }
     }
 }
