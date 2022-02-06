@@ -11,6 +11,7 @@ namespace ExerciseComposition1.Entities
         public double BaseSalary { get; set; }
         
         public IList<HourContract> Contracts { get; }
+        public Department Department { get; set; }
 
         public Worker()
         {
