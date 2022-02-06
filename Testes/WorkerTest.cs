@@ -1,4 +1,5 @@
 ﻿using System;
+using ExerciseComposition1;
 using Xunit;
 
 namespace Testes
@@ -6,9 +7,27 @@ namespace Testes
     public class WorkerTest
     {
         [Fact]
-        public void Test1()
+        public void TesteAdicionarContrato()
         {
-            Assert.True(true);
+            Worker falseWorker = new Worker
+            {
+                Level = WorkerLevel.Junior,
+                Name = "Jorge",
+                BaseSalary = 2400.00
+            };
+            HourContract falseHourContract = new HourContract
+            {
+                Date = new DateTime(2022, 07, 30),
+                Hours = 40,
+                ValuePerHour = 30.00
+            };
+            
+            
+            falseWorker.AddContract(falseHourContract);
+
+            Assert.NotNull(falseWorker.Contracts);
+            Assert.True(falseWorker.Contracts[0].Date == falseHourContract.Date);
+            Assert.True(falseWorker.Contracts[0].Hours == falseHourContract.Hours);
         }
     }
 }

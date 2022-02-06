@@ -39,8 +39,11 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="HourContract.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Worker.cs" />
+        <Compile Include="WorkerLevel.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="Documentation\Readme.md" />
