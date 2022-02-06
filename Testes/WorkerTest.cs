@@ -61,11 +61,12 @@ namespace Testes
                 }
             };
 
-            falseWorker.RemoveContract(2);
+            falseWorker.RemoveContract(1);
             
             Assert.Equal(2, falseWorker.Contracts.Count);
         }
 
+        [Fact]
         public void TesteValorASerPago()
         {
             #region Mock
