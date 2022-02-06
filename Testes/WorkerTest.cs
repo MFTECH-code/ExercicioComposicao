@@ -23,12 +23,47 @@ namespace Testes
                 ValuePerHour = 30.00
             };
             
-            
             falseWorker.AddContract(falseHourContract);
 
             Assert.NotNull(falseWorker.Contracts);
             Assert.True(falseWorker.Contracts[0].Date == falseHourContract.Date);
             Assert.True(falseWorker.Contracts[0].Hours == falseHourContract.Hours);
+        }
+
+        [Fact]
+        public void TesteRemoverContrato()
+        {
+            Worker falseWorker = new Worker
+            {
+                Level = WorkerLevel.Junior,
+                Name = "Jorge",
+                BaseSalary = 2400.00,
+                Contracts =
+                {
+                    new HourContract
+                    {
+                    Date = new DateTime(2022, 07, 30),
+                    Hours = 40,
+                    ValuePerHour = 30.00
+                    },
+                    new HourContract
+                    {
+                    Date = new DateTime(2022, 07, 30),
+                    Hours = 40,
+                    ValuePerHour = 30.00
+                    },
+                    new HourContract
+                    {
+                    Date = new DateTime(2022, 07, 30),
+                    Hours = 40,
+                    ValuePerHour = 30.00
+                    }
+                }
+            };
+
+            falseWorker.RemoveContract(2);
+            
+            Assert.Equal(2, falseWorker.Contracts.Count);
         }
     }
 }
