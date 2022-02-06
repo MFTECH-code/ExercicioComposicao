@@ -69,6 +69,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="HourContractTest.cs" />
         <Compile Include="WorkerTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
